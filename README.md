@@ -1,0 +1,113 @@
+# 📊 Herramienta Analítica de Portafolios de Inversión
+
+Este proyecto desarrolla una solución analítica para visualizar, analizar y generar insights sobre portafolios de clientes, integrando múltiples fuentes de datos mediante PostgreSQL, SQL y Python.
+
+La herramienta permite a equipos comerciales y estructuradores entender mejor el comportamiento de sus clientes y tomar decisiones basadas en datos.
+
+## 🎯 Objetivo
+
+Construir una herramienta que permita:
+
+- Integrar información de clientes desde múltiples fuentes
+- Limpiar y transformar datos usando SQL
+- Visualizar portafolios locales (COP) e internacionales (USD)
+- Generar conocimiento mediante modelos analíticos
+
+
+## 🏗️ Arquitectura del Pipeline
+
+El flujo del proyecto es el siguiente:
+
+CSV → Python (ETL) → PostgreSQL → SQL (vistas) → Python → Dashboard → Modelo analítico
+
+
+## 🗂️ Estructura del proyecto
+
+portafolio-analitico/
+│
+├── docs/                  
+├── etl/
+├── models/                       
+├── src/                   
+├── notebooks/                               
+├── video/                 
+├── README.md 
+
+## ⚙️ Tecnologías
+
+- Python
+- PostgreSQL
+- SQL
+- Pandas
+- SQLAlchemy
+- Dash / Plotly
+- Scikit-learn (modelo analítico)
+
+## 🧱 Base de Datos
+
+Se creó una base de datos en PostgreSQL con una tabla por cada archivo CSV:
+
+- cat_perfil_riesgo
+- catalogo_activos
+- catalogo_banca
+- historico_aba_macroactivos
+- historico_aba_usd_internacional
+
+## 🧹 Procesamiento de datos
+
+La transformación se realizó principalmente en SQL mediante:
+
+- Limpieza de valores nulos
+- Normalización de datos
+- Integración de tablas mediante JOINs
+- Creación de vistas analíticas
+
+
+## 📊 Vistas principales
+
+- vw_portafolio_base → integración de datos
+- vw_portafolio_actual → última fecha disponible
+- vw_portafolio_cliente → valor total por cliente
+- vw_composicion_activos → distribución por activo
+
+
+## 📈 Visualización
+
+Se desarrolló un dashboard interactivo con Dash que permite:
+
+- Seleccionar clientes
+- Visualizar portafolios en COP y USD
+- Analizar la composición por activos
+
+## 📈 Visualización
+
+Se desarrolló un dashboard interactivo con Dash que permite:
+
+- Seleccionar clientes
+- Visualizar portafolios en COP y USD
+- Analizar la composición por activos
+
+## 🚀 Ejecución
+
+1. Clonar repositorio:
+
+git clone https://github.com/tu_usuario/portafolio-analitico.git
+
+2. Instalar dependencias:
+
+pip install -r requirements.txt
+
+3. Configurar conexión a PostgreSQL
+
+4. Ejecutar carga de datos:
+
+python src/main.py
+
+5. Ejecutar dashboard:
+
+python src/dashboard/app.py
+
+
+- 
+
+
