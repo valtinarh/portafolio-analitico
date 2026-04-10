@@ -25,13 +25,14 @@ CSV → Python (ETL) → PostgreSQL → SQL (vistas) → Python → Dashboard �
 
 portafolio-analitico/
 │
-├── docs/
-├── etl/
-├── models/
-├── src/
-├── notebooks/
-├── video/
-├── README.md
+├── docs/                  
+├── etl/                   
+├── models/                   
+├── notebooks/             
+├── src/                  
+├── video/                 
+├── README.md 
+
 
 ## ⚙️ Tecnologías
 
@@ -97,7 +98,7 @@ git clone https://github.com/tu_usuario/portafolio-analitico.git
 2. Instalar dependencias:
 ```bash
 pip install -r requirements.txt
-
+```
 3. Configurar conexión a PostgreSQL
 
 4. Ejecutar carga de datos:
