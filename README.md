@@ -25,13 +25,13 @@ CSV → Python (ETL) → PostgreSQL → SQL (vistas) → Python → Dashboard �
 
 portafolio-analitico/
 │
-├── docs/                  
+├── docs/
 ├── etl/
-├── models/                       
-├── src/                   
-├── notebooks/                               
-├── video/                 
-├── README.md 
+├── models/
+├── src/
+├── notebooks/
+├── video/
+├── README.md
 
 ## ⚙️ Tecnologías
 
@@ -57,10 +57,11 @@ Se creó una base de datos en PostgreSQL con una tabla por cada archivo CSV:
 
 La transformación se realizó principalmente en SQL mediante:
 
-- Limpieza de valores nulos
-- Normalización de datos
-- Integración de tablas mediante JOINs
-- Creación de vistas analíticas
+- Se identificó que habia filas con datos corridos o en celdas que no correspondian, se identificaron esos patrones y se modificó columna por columna para organizar los datos.
+- Se limpió los valores nulos 
+- Se Normalizaron los de datos
+- Se hizo integración de tablas mediante JOINs
+- Se crearon vistas analíticas
 
 
 ## 📊 Vistas principales
@@ -90,24 +91,20 @@ Se desarrolló un dashboard interactivo con Dash que permite:
 ## 🚀 Ejecución
 
 1. Clonar repositorio:
-
+```bash
 git clone https://github.com/tu_usuario/portafolio-analitico.git
-
+```
 2. Instalar dependencias:
-
+```bash
 pip install -r requirements.txt
 
 3. Configurar conexión a PostgreSQL
 
 4. Ejecutar carga de datos:
-
+```bash
 python src/main.py
-
+```
 5. Ejecutar dashboard:
-
+```bash
 python src/dashboard/app.py
-
-
-- 
-
-
+```
