@@ -18,7 +18,23 @@ Construir una herramienta que permita:
 
 El flujo del proyecto es el siguiente:
 
-CSV → Python (ETL) → PostgreSQL → SQL (vistas) → Python → Dashboard → Modelo analítico
+1. Ingesta de datos:
+   Los archivos CSV son cargados automáticamente a PostgreSQL mediante scripts en Python.
+
+2. Almacenamiento:
+    Los datos se almacenan en tablas crudas (data raw).
+
+3. Procesamiento:
+    Se realiza limpieza y transformación de datos utilizando SQL (data clean).
+
+4. Consolidación:
+   Se construyen vistas que integran y agregan la información (data final).
+
+5. Modelado:
+   Se aplican modelos de clustering para segmentar clientes y generar recomendaciones.
+
+6. Visualización:
+   Se desarrolla un dashboard interactivo para explorar los portafolios.
 
 
 ## 🗂️ Estructura del proyecto
