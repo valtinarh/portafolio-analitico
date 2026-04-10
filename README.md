@@ -24,7 +24,7 @@ CSV → Python (ETL) → PostgreSQL → SQL (vistas) → Python → Dashboard �
 ## 🗂️ Estructura del proyecto
 
 portafolio-analitico/
-│
+│ 
 ├── docs/                  
 ├── etl/                   
 ├── models/                   
@@ -72,14 +72,6 @@ La transformación se realizó principalmente en SQL mediante:
 - vw_portafolio_cliente → valor total por cliente
 - vw_composicion_activos → distribución por activo
 
-
-## 📈 Visualización
-
-Se desarrolló un dashboard interactivo con Dash que permite:
-
-- Seleccionar clientes
-- Visualizar portafolios en COP y USD
-- Analizar la composición por activos
 
 ## 📈 Visualización
 
